@@ -8,7 +8,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap');
 
         :root {
-            font-family: 'Cairo', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Cairo', sans-serif;
             color-scheme: dark;
             --bg-dark: #04050a;
             --bg-soft: rgba(255, 255, 255, 0.04);
@@ -21,27 +21,32 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Cairo', sans-serif;
         }
 
         body {
             min-height: 100vh;
-            background: linear-gradient(135deg, #0b1221 0%, #111827 35%, #0f172a 100%);
+            background-image: url('https://j.top4top.io/p_38024bfgu1.png');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-attachment: fixed;
+            background-size: cover;
             color: var(--text);
             display: flex;
             align-items: center;
             justify-content: center;
             padding: 20px;
             position: relative;
-            overflow: hidden;
         }
 
         body::before {
             content: '';
-            position: absolute;
-            inset: 0;
-            background: radial-gradient(circle at 18% 20%, rgba(59, 130, 246, 0.2), transparent 18%),
-                        radial-gradient(circle at 80% 22%, rgba(96, 165, 250, 0.16), transparent 20%),
-                        radial-gradient(circle at 60% 85%, rgba(14, 165, 233, 0.12), transparent 22%);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
             pointer-events: none;
             z-index: 0;
         }
@@ -51,6 +56,9 @@
             z-index: 1;
             width: 100%;
             max-width: 560px;
+            max-height: 95vh;
+            display: flex;
+            flex-direction: column;
         }
 
         .panel {
@@ -59,10 +67,28 @@
             border-radius: 32px;
             box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
             overflow: hidden;
+            display: flex;
+            flex-direction: column;
         }
 
         .panel-body {
             padding: 48px 22px 56px;
+            overflow-y: auto;
+            scrollbar-width: thin;
+        }
+
+        .panel-body::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        .panel-body::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+        }
+
+        .panel-body::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 10px;
         }
 
         .top-block {
@@ -70,10 +96,10 @@
         }
 
         .logo-box {
-            width: 112px;
-            height: 112px;
+            width: 130px;
+            height: 130px;
             margin: 0 auto 20px;
-            border-radius: 28px;
+            border-radius: 50%;
             overflow: hidden;
             border: 1.6px solid rgba(255,255,255,0.24);
             background: rgba(255,255,255,0.04);
@@ -82,14 +108,14 @@
         }
 
         .logo-box img {
-            width: 88px;
-            height: 88px;
+            width: 100%;
+            height: 100%;
             object-fit: cover;
-            border-radius: 24px;
+            border-radius: 50%;
         }
 
         .brand-name {
-            font-size: clamp(1.7rem, 4vw, 2.6rem);
+            font-size: 1.9rem;
             font-weight: 700;
             line-height: 1.1;
             letter-spacing: 0.01em;
@@ -97,20 +123,31 @@
 
         .brand-subtitle {
             margin-top: 18px;
-            color: var(--muted);
             font-size: 1.05rem;
             line-height: 1.8;
+        }
+
+        .brand-subtitle .bold-text {
+            font-weight: 800;
+            color: #ffaa00;
+        }
+
+        .brand-subtitle .small-text {
+            color: #ffffff;
+            font-size: 0.85rem;
         }
 
         .brand-arrow {
             margin-top: 20px;
             font-size: 1.7rem;
+            color: #e60000;
         }
 
         .link-list {
             margin-top: 34px;
             display: grid;
             gap: 14px;
+            padding-bottom: 10px;
         }
 
         .link-item {
@@ -133,18 +170,6 @@
             background: rgba(255, 255, 255, 0.1);
         }
 
-        .link-item .title {
-            font-size: 1.05rem;
-            font-weight: 700;
-        }
-
-        .link-item .subtitle {
-            margin-top: 6px;
-            color: var(--muted);
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
-
         .footer {
             margin-top: 20px;
             text-align: center;
@@ -155,9 +180,6 @@
         @media (max-width: 640px) {
             .panel-body {
                 padding: 36px 18px 44px;
-            }
-            .brand-name {
-                font-size: 2rem;
             }
         }
     </style>
@@ -171,7 +193,7 @@
                         <img src="https://fly.linkcdn.cc/upload/2026052007/177926178294487563.png" alt="شعار الفحام للمعلوميات">
                     </div>
                     <h1 class="brand-name">الفحام للمعلوميات</h1>
-                    <p class="brand-subtitle">للتقنيات والبرمجيات والتصاميم<br>تابعونا على مواقع التواصل الاجتماعي</p>
+                    <p class="brand-subtitle"><span class="bold-text">للتقنيات والبرمجيات والتصاميم</span><br><span class="small-text">تابعونا على مواقع التواصل الاجتماعي</span></p>
                     <div class="brand-arrow">🔻</div>
                 </div>
 
@@ -184,11 +206,10 @@
                     <a class="link-item" href="https://whatsapp.com/channel/0029VbCa4Nd2P59l7LFa7B3j" target="_blank">WhatSapp</a>
                     <a class="link-item" href="https://t.me/alfahaminfo1" target="_blank">Telegram</a>
                     <a class="link-item" href="https://alfahamstore.apk.com/" target="_blank">Alfaham Store</a>
-                    <a class="link-item" href="https://www.linkfly.to/en?utm_source=madewithlinkflyFree&utm_medium=madewith" target="_blank">Linkfly</a>
                 </div>
             </div>
         </section>
-        <footer class="footer">© 2026 الفحام للمعلوميات • جميع الروابط الرسمية محدثة باستمرار.</footer>
+        <footer class="footer">@alfahaminfo</footer>
     </div>
 </body>
 </html>
