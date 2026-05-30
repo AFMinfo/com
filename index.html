@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الفحام للمعلوميات | الروابط الرسمية</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap');
+
+        :root {
+            font-family: 'Cairo', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color-scheme: dark;
+            --bg-dark: #04050a;
+            --bg-soft: rgba(255, 255, 255, 0.04);
+            --border: rgba(255, 255, 255, 0.18);
+            --text: #ffffff;
+            --muted: #c3cad6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0b1221 0%, #111827 35%, #0f172a 100%);
+            color: var(--text);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 18% 20%, rgba(59, 130, 246, 0.2), transparent 18%),
+                        radial-gradient(circle at 80% 22%, rgba(96, 165, 250, 0.16), transparent 20%),
+                        radial-gradient(circle at 60% 85%, rgba(14, 165, 233, 0.12), transparent 22%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .layout {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            max-width: 560px;
+        }
+
+        .panel {
+            background: rgba(0, 0, 0, 0.68);
+            border: 1px solid var(--border);
+            border-radius: 32px;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+            overflow: hidden;
+        }
+
+        .panel-body {
+            padding: 48px 22px 56px;
+        }
+
+        .top-block {
+            text-align: center;
+        }
+
+        .logo-box {
+            width: 112px;
+            height: 112px;
+            margin: 0 auto 20px;
+            border-radius: 28px;
+            overflow: hidden;
+            border: 1.6px solid rgba(255,255,255,0.24);
+            background: rgba(255,255,255,0.04);
+            display: grid;
+            place-items: center;
+        }
+
+        .logo-box img {
+            width: 88px;
+            height: 88px;
+            object-fit: cover;
+            border-radius: 24px;
+        }
+
+        .brand-name {
+            font-size: clamp(1.7rem, 4vw, 2.6rem);
+            font-weight: 700;
+            line-height: 1.1;
+            letter-spacing: 0.01em;
+        }
+
+        .brand-subtitle {
+            margin-top: 18px;
+            color: var(--muted);
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        .brand-arrow {
+            margin-top: 20px;
+            font-size: 1.7rem;
+        }
+
+        .link-list {
+            margin-top: 34px;
+            display: grid;
+            gap: 14px;
+        }
+
+        .link-item {
+            display: block;
+            width: 100%;
+            border: 1.6px solid #fff;
+            border-radius: 30px;
+            background: rgba(255, 255, 255, 0.04);
+            padding: 18px 22px;
+            text-decoration: none;
+            color: var(--text);
+            transition: transform 0.2s ease, background 0.2s ease;
+            font-size: 1.05rem;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .link-item:hover {
+            transform: translateY(-2px);
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .link-item .title {
+            font-size: 1.05rem;
+            font-weight: 700;
+        }
+
+        .link-item .subtitle {
+            margin-top: 6px;
+            color: var(--muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 640px) {
+            .panel-body {
+                padding: 36px 18px 44px;
+            }
+            .brand-name {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="layout">
+        <section class="panel">
+            <div class="panel-body">
+                <div class="top-block">
+                    <div class="logo-box">
+                        <img src="https://fly.linkcdn.cc/upload/2026052007/177926178294487563.png" alt="شعار الفحام للمعلوميات">
+                    </div>
+                    <h1 class="brand-name">الفحام للمعلوميات</h1>
+                    <p class="brand-subtitle">للتقنيات والبرمجيات والتصاميم<br>تابعونا على مواقع التواصل الاجتماعي</p>
+                    <div class="brand-arrow">🔻</div>
+                </div>
+
+                <div class="link-list">
+                    <a class="link-item" href="https://youtube.com/@alfahaminfo" target="_blank">YouTube</a>
+                    <a class="link-item" href="https://m.facebook.com/alfahaminfo1" target="_blank">Facebook</a>
+                    <a class="link-item" href="https://www.instagram.com/alfahaminfo" target="_blank">Instagram</a>
+                    <a class="link-item" href="https://www.tiktok.com/@alfaham.info" target="_blank">Tik Tok</a>
+                    <a class="link-item" href="http://x.com/alfaham_info" target="_blank">X(Twitter)</a>
+                    <a class="link-item" href="https://whatsapp.com/channel/0029VbCa4Nd2P59l7LFa7B3j" target="_blank">WhatSapp</a>
+                    <a class="link-item" href="https://t.me/alfahaminfo1" target="_blank">Telegram</a>
+                    <a class="link-item" href="https://alfahamstore.apk.com/" target="_blank">Alfaham Store</a>
+                    <a class="link-item" href="https://www.linkfly.to/en?utm_source=madewithlinkflyFree&utm_medium=madewith" target="_blank">Linkfly</a>
+                </div>
+            </div>
+        </section>
+        <footer class="footer">© 2026 الفحام للمعلوميات • جميع الروابط الرسمية محدثة باستمرار.</footer>
+    </div>
+</body>
+</html>
